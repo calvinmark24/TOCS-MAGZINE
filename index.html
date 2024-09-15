@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOCS Magazine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/Style/index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img id="logo" style="position: relative;right:5px;" src="./assets/imgs/oxford-college-of-science-logo.png" width="70" height="70" alt="">
+                <a class="navbar-brand" id="head-logo"  href="#">The Oxford College Of Science <br> Magazine</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fashion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Travel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero d-flex align-items-center">
+            <div class="container text-center text-white">
+                <h1 class="display-4 fw-bold">Welcome to The Oxford College Of Science Magazine</h1>
+                <p class="lead">Discover the latest trends in IT Industries, Ai, and More</p>
+                <a href="#featured" class="btn btn-primary btn-lg">Explore Now</a>
+            </div>
+        </section>
+
+        <section id="featured" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Featured Articles</h2>
+                <div class="row" id="featured-articles">
+                    <!-- Featured articles will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>The Oxford College Of Science</h5>
+                    <p>Your go-to source for all Tech News.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2024 The Oxford College Of Science. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sample featured articles data
+        const featuredArticles = [
+            {
+                title: "10 Must-Visit Summer Destinations",
+                category: "Travel",
+                image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+                link: "./Articles/Article1.html"
+            },
+            {
+                title: "Spring Fashion Trends You Can't Miss",
+                category: "Fashion",
+                image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+                link: "./Articles/article.html"
+            },
+            {
+                title: "Healthy and Delicious Breakfast Ideas",
+                category: "Food",
+                image: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+                link: "#"
+            }
+        ];
+
+        // Function to create article cards
+        function createArticleCard(article) {
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img class="article-img" src="${article.image}" class="card-img-top" alt="${article.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${article.title}</h5>
+                            <p class="card-text"><small class="text-muted">${article.category}</small></p>
+                            <a href="${article.link}" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Populate featured articles
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredArticlesContainer = document.getElementById('featured-articles');
+            featuredArticles.forEach(article => {
+                featuredArticlesContainer.innerHTML += createArticleCard(article);
+            });
+        });
+    </script>
+</body>
+</html>
