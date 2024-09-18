@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Collage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8ccdf3;
+            margin: 10;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+        .team-collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 30 32px 36px rgb(99, 173, 233);
+        }
+        .team-member {
+            text-align: center;
+            width: 200px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #848484;
+            transition: transform 0.3s ease;
+        }
+        .team-member img:hover {
+            transform: scale(1.05);
+        }
+        .team-member h3 {
+            margin: 10px 0 5px;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1200px;
+            padding: 2rem;
+        }
+        .container h1 {
+            text-align: center;
+            color: rgb(95, 0, 111);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .team-member p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .team-member h4 {
+            margin: 5px 0;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        var aud= new Audio();
+        aud.src="click.mp3";
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Team Members</h1>  
+    <div class="team-collage">
+        <div class="team-member">
+            <img src="cm.jpg" alt="calvin mark" onmouseover="aud.play()">
+            <h3>Calvin Mark</h3>
+            <h4>BCA 3 year</h4>
+            <p>web developer</p>
+        </div>
+        <div class="team-member">
+            <img src="sh.jpg" alt="shashank">
+            <h3>Shashank</h3>
+            <h4>BCA 3 year</h4>
+            <p>web developer</p>
+        </div>
+        <div class="team-member">
+            <img src="md.jpg" alt="md owais">
+            <h3>Mohamed Owais</h3>
+            <h4>BCA 3 year</h4>
+            <p>Ios Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="ad.jpg" alt="aditya">
+            <h3>Aditya</h3>
+            <h4>BCA 3 year</h4>
+            
+        </div>
+        <div class="team-member">
+            <img src="bi.jpg" alt="bignaraj panda">
+            <h3>Bignaraj Panda</h3>
+            <h4>BCA 3 year</h4>
+            
+        </div>
+    </div>
+    </div>
+</body>
+</html>
